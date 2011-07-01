@@ -1,0 +1,43 @@
+﻿<div>
+    <a href="#/persons/add">Nova pessoa</a> {{if (total!=0)}}
+    <table>
+        <thead>
+            <tr>
+                <th>
+                </th>
+                <th>
+                    Nome
+                </th>
+                <th>
+                    Nascimento
+                </th>
+                <th>
+                    Sexo
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{each pessoas}}
+            <tr>
+                <td>
+                    <a href="#/persons/edit/${Id}">Editar</a>
+                </td>
+                <td>
+                    ${Nome}
+                </td>
+                <td>
+                    ${Nascimento}
+                </td>
+                <td>
+                    ${Sexo}
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+    {{else}}
+    <h4>
+        Nenhuma pessoa na lista
+    </h4>
+    {{/if}}
+</div>
